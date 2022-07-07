@@ -17,7 +17,8 @@
         </title>
     
   </head>
-  <body style="background-color: #212121;">
+  <body style="background-color: #212121;color: white;">
+    <div class="container">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
           <a class="navbar-brand text-light" href="#">Joseph <span style="color: rgb(91, 219, 32);">Gakumo</span></a>
@@ -27,39 +28,29 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0 text-light">
               <li class="nav-item">
-                <a class="nav-link active text-light" aria-current="page" href="#">Home</a>
+                <a class="nav-link active text-light" aria-current="page" href="{{ url_for('home_page') }}">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-light" href="#">Link</a>
+                <a class="nav-link text-light" href="{{url_for('about')}}">Market</a>
               </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle text-light" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Dropdown
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item text-light" href="#">Action</a></li>
-                  <li><a class="dropdown-item text-light" href="#">Another action</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item text-light" href="#">Something else here</a></li>
-                </ul>
-              </li>
+              
             
             </ul>
             <form class="d-flex">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success text-light " type="submit">Search</button>
+              <button class="btn btn-outline-success text-light m-2" type="submit">Login</button>
+              <button class="btn btn-outline-success text-light m-2" type="submit">Register</button>
             </form>
           </div>
         </div>
       </nav>
 
      {% block content %}
-     
+
      {% endblock %}
 
 
 
-
+    </div>
 
     <!-- Optional JavaScript; choose one of the two! -->
 
